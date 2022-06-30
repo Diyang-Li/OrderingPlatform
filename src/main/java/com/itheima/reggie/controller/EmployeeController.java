@@ -1,10 +1,12 @@
 package com.itheima.reggie.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.reggie.common.R;
 import com.itheima.reggie.entity.Employee;
 import com.itheima.reggie.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
@@ -92,5 +94,25 @@ public class EmployeeController {
 
         employeeService.save(employee);
         return R.success("Add new employee successfully!");
+    }
+
+    @GetMapping("/page")
+    public R<Page> page(int page, int pageSize, String name){
+        log.info("page = {},pageSize = {},name = {}" ,page,pageSize,name);
+
+        // paging constructor
+        Page pageInfo = new Page(page, pageSize);
+
+        //Conditional constructor
+        LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
+        //add condition
+        queryWrapper.like(StringUtils.isNotEmpty(name), Employee::getName, name);
+        //sort by update time
+        queryWrapper.orderByDesc(Employee::getUpdateTime);
+
+        //execute query
+        employeeService.page(pageInfo, queryWrapper);
+
+        return R.success(pageInfo);
     }
 }
