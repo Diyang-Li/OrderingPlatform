@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac75b90c-a3a8-4b70-8ee7-7e5cd9f68a67" name="Changes" comment="Add employee">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/MybatisPlusConfig.java" afterDir="false" />
+    <list default="true" id="ac75b90c-a3a8-4b70-8ee7-7e5cd9f68a67" name="Changes" comment="Paging Search">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/JacksonObjectMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" afterDir="false" />
     </list>
@@ -52,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -64,8 +65,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\study_materials\reggie\reggie_take_out\src\main\resources" />
       <recent name="D:\study_materials\reggie\reggie_take_out\src\main\java\com\itheima\reggie\common" />
+      <recent name="D:\study_materials\reggie\reggie_take_out\src\main\resources" />
       <recent name="D:\study_materials\reggie\reggie_take_out\src\main\java\com\itheima\reggie\config\entity" />
     </key>
   </component>
@@ -109,7 +110,12 @@
       <workItem from="1656376355309" duration="7760000" />
       <workItem from="1656469722805" duration="684000" />
       <workItem from="1656470450404" duration="4036000" />
-      <workItem from="1656551732178" duration="7218000" />
+      <workItem from="1656551732178" duration="8197000" />
+      <workItem from="1656636739193" duration="622000" />
+      <workItem from="1656637428235" duration="795000" />
+      <workItem from="1656640011373" duration="4408000" />
+      <workItem from="1656645716793" duration="22000" />
+      <workItem from="1656645756587" duration="950000" />
     </task>
     <task id="LOCAL-00001" summary="Add Filter">
       <created>1656387887650</created>
@@ -125,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656552485627</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Paging Search">
+      <created>1656559496756</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656559496756</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,15 +158,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Filter" />
     <MESSAGE value="Add employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add employee" />
+    <MESSAGE value="Paging Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paging Search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="4" />
+          <line>135</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

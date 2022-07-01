@@ -78,6 +78,13 @@ public class EmployeeController {
         request.getSession().removeAttribute("employee");
         return R.success("logout successfully");
     }
+
+    /**
+     * Add an employer
+     * @param request
+     * @param employee
+     * @return
+     */
     @PostMapping
     public R<String> save(HttpServletRequest request,@RequestBody Employee employee){
         log.info("Add employee: employee boday: {}", employee.toString());
@@ -96,6 +103,13 @@ public class EmployeeController {
         return R.success("Add new employee successfully!");
     }
 
+    /**
+     * Paging
+     * @param page
+     * @param pageSize
+     * @param name
+     * @return
+     */
     @GetMapping("/page")
     public R<Page> page(int page, int pageSize, String name){
         log.info("page = {},pageSize = {},name = {}" ,page,pageSize,name);
@@ -115,4 +129,28 @@ public class EmployeeController {
 
         return R.success(pageInfo);
     }
+
+    // used to update resource, and for mapping HTTP PUT requests onto specific handler methods
+    @PutMapping
+    public R<String> update(HttpServletRequest request, @RequestBody Employee employee){
+        log.info(employee.toString());
+        Long empId = (Long) request.getSession().getAttribute("employee");
+        employee.setUpdateTime(LocalDateTime.now());
+        employee.setUpdateUser(empId);
+        employeeService.updateById(employee);
+        return R.success("Update successfully");
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
