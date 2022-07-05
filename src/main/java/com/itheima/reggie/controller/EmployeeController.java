@@ -140,6 +140,22 @@ public class EmployeeController {
         employeeService.updateById(employee);
         return R.success("Update successfully");
     }
+
+    /**
+     * Get employee information by id
+     * @param id
+     * @return
+     */
+    //@PathVariable annotation can be used to handle template variables in the request URI mapping
+    @GetMapping("/{id}")
+    public R<Employee> getById(@PathVariable Long id){
+        log.info("Get employee information by id from reques URI...");
+        Employee employee = employeeService.getById(id);
+        if (employee != null){
+            return R.success(employee);
+        }
+        return R.error("Did't find the employee");
+    }
 }
 
 
