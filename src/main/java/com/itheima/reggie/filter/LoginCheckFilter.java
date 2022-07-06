@@ -1,6 +1,7 @@
 package com.itheima.reggie.filter;
 
 import com.alibaba.fastjson.JSON;
+import com.itheima.reggie.common.BaseContext;
 import com.itheima.reggie.common.R;
 import jdk.security.jarsigner.JarSigner;
 import lombok.extern.slf4j.Slf4j;
@@ -52,6 +53,10 @@ public class LoginCheckFilter implements Filter {
         // 3. if already login
         if (request.getSession().getAttribute("employee") != null){
             log.info("the user already login, the id is: {}", request.getSession().getAttribute("employee"));
+
+            Long empId = (Long) request.getSession().getAttribute("employee");
+            BaseContext.setCurrentId(empId);
+
             filterChain.doFilter(request, response);
             return;
         }

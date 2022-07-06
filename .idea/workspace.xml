@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac75b90c-a3a8-4b70-8ee7-7e5cd9f68a67" name="Changes" comment="change employee status">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/BaseContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/MyMetaObjecthandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/filter/LoginCheckFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +121,12 @@
       <workItem from="1656987827858" duration="3982000" />
       <workItem from="1657029114127" duration="6000" />
       <workItem from="1657035492866" duration="363000" />
+      <workItem from="1657053491433" duration="2808000" />
+      <workItem from="1657075584605" duration="695000" />
+      <workItem from="1657076618071" duration="190000" />
+      <workItem from="1657076843763" duration="1833000" />
+      <workItem from="1657078822058" duration="2218000" />
+      <workItem from="1657122753973" duration="2673000" />
     </task>
     <task id="LOCAL-00001" summary="Add Filter">
       <created>1656387887650</created>
@@ -147,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656647188526</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change employee status">
+      <created>1657053587543</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657053587543</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,8 +196,13 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/EmployeeController.java</url>
-          <line>152</line>
+          <url>file://$PROJECT_DIR$/../1 瑞吉外卖项目/代码/day03/reggie_take_out/src/main/java/com/itheima/reggie/common/MyMetaObjecthandler.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/filter/LoginCheckFilter.java</url>
+          <line>57</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
