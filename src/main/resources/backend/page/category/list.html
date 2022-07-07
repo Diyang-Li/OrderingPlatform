@@ -22,13 +22,13 @@
           class="continue"
           @click="addClass('class')"
         >
-          + 新增菜品分类
+          + AddNewCategory
         </el-button>
         <el-button
           type="primary"
           @click="addClass('meal')"
         >
-          + 新增套餐分类
+          + AddNewComboCategory
         </el-button>
       </div>
       <el-table
@@ -38,19 +38,19 @@
       >
         <el-table-column
           prop="name"
-          label="分类名称"
+          label="Name"
         /></el-table-column>
         <el-table-column
           prop="type"
-          label="分类类型"
+          label="Type"
         >
           <template slot-scope="scope">
-            <span>{{ scope.row.type == '1' ? '菜品分类': '套餐分类' }}</span>
+            <span>{{ scope.row.type == '1' ? 'Meal': 'Combo' }}</span>
           </template>
         </el-table-column>
         <el-table-column
           prop="updateTime"
-          label="操作时间"
+          label="Update Time"
         >
         <template slot-scope="scope">
          {{scope.row.updateTime}}
@@ -58,10 +58,10 @@
         </el-table-column>
         <el-table-column
           prop="sort"
-          label="排序"
+          label="Sort"
         /></el-table-column>
         <el-table-column
-          label="操作"
+          label="Operate"
           width="160"
           align="center"
         >
@@ -72,7 +72,7 @@
               class="blueBug"
               @click="editHandle(scope.row)"
             >
-              修改
+              Edit
             </el-button>
             <el-button
               type="text"
@@ -80,14 +80,14 @@
               class="delBut non"
               @click="deleteHandle(scope.row.id)"
             >
-              删除
+              Delete
             </el-button>
           </template>
         </el-table-column>
       </el-table>
       <el-pagination
         class="pageList"
-        :page-sizes="[10, 20, 30, 40]"
+        :page-sizes="[5, 10, 20, 30, 40]"
         :page-size="pageSize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="counts"
@@ -105,15 +105,15 @@
         class="demo-form-inline"
         label-width="100px"
       >
-        <el-form-item label="分类名称：">
+        <el-form-item label="Name：">
           <el-input
             v-model="classData.name"
-            placeholder="请输入分类名称"
+            placeholder="Please input Category Name"
             maxlength="14"
           />
         </el-form-item>
-        <el-form-item label="排序：">
-          <el-input v-model="classData.sort"  type="number" placeholder="请输入排序" />
+        <el-form-item label="Sort：">
+          <el-input v-model="classData.sort"  type="number" placeholder="Please input Sort" />
         </el-form-item>
       </el-form>
       <span
@@ -123,19 +123,19 @@
         <el-button
           size="medium"
           @click="classData.dialogVisible = false"
-        >取 消</el-button>
+        >Cancel</el-button>
         <el-button
           type="primary"
           size="medium"
           @click="submitForm()"
-        >确 定</el-button>
+        >Save</el-button>
         <el-button
           v-if="action != 'edit'"
           type="primary"
           size="medium"
           class="continue"
           @click="submitForm('go')"
-        > 保存并继续添加 </el-button>
+        > Save and Continue </el-button>
       </span>
     </el-dialog>
   </div>
@@ -218,20 +218,20 @@
           },
           //删除
           deleteHandle(id) {
-            this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
-              'confirmButtonText': '确定',
-              'cancelButtonText': '取消',
+            this.$confirm('This operation will delete the meal/combo permanently!', 'Notice', {
+              'confirmButtonText': 'Yes',
+              'cancelButtonText': 'No',
               'type': 'warning'
             }).then(() => {
               deleCategory(id).then(res => {
                 if (res.code === 1) {
-                  this.$message.success('删除成功！')
+                  this.$message.success('Delete Successfully！')
                   this.handleQuery()
                 } else {
-                  this.$message.error(res.msg || '操作失败')
+                  this.$message.error(res.msg || 'Operation failed')
                 }
               }).catch(err => {
-                this.$message.error('请求出错了：' + err)
+                this.$message.error('Request Error: ' + err)
               })
             })
           },
