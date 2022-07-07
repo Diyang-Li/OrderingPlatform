@@ -33,4 +33,14 @@ public class GlobalExceptionHandler {
 
         return R.error("Unknown Error");
     }
+
+    /**
+     * Catch customized exception
+     * @return
+     */
+    @ExceptionHandler(CustomException.class)
+    public R<String> exceptionHandler(CustomException ex){
+        log.error(ex.getMessage());
+        return R.error(ex.getMessage());
+    }
 }

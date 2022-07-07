@@ -54,7 +54,47 @@ public class CategoryController {
     @DeleteMapping
     public R<String> delete(Long ids){
         log.info("delete category id: {}:", ids);
-        categoryService.removeById(ids);
+//        categoryService.removeById(ids);
+        categoryService.remove(ids);
         return R.success("Category has delete successfully");
     }
+
+    /**
+     * update category information by id
+     * @param category
+     * @return
+     */
+    @PutMapping
+    public R<String> update(@RequestBody Category category){
+        log.info("update category: {}", category);
+        categoryService.updateById(category);
+        return R.success("Update successfully!");
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
