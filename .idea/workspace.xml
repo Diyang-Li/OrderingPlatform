@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac75b90c-a3a8-4b70-8ee7-7e5cd9f68a67" name="Changes" comment="upload file and save to disk">
+    <list default="true" id="ac75b90c-a3a8-4b70-8ee7-7e5cd9f68a67" name="Changes" comment="upload file to page">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/DishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/dto/DishDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/DishFlavor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/mapper/DishFlavorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/DishFlavorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/impl/DishFlavorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/ReggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/ReggieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/service/impl/DishServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/backend/page/demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/itheima/reggie/dto" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -63,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\study_materials\reggie\reggie_take_out\src\main\resources\backend\page\demo" />
+      <recent name="D:\study_materials\reggie\reggie_take_out\src\main\java\com\itheima\reggie\dto" />
       <recent name="D:\study_materials\reggie\reggie_take_out\src\main\java\com\itheima\reggie\entity" />
+      <recent name="D:\study_materials\reggie\reggie_take_out\src\main\resources\backend\page\demo" />
       <recent name="D:\study_materials\reggie\reggie_take_out\src\main\java\com\itheima\reggie\common" />
       <recent name="D:\study_materials\reggie\reggie_take_out\src\main\resources" />
-      <recent name="D:\study_materials\reggie\reggie_take_out\src\main\java\com\itheima\reggie\config\entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.itheima.reggie.entity" />
@@ -153,6 +162,13 @@
       <workItem from="1657424043415" duration="1888000" />
       <workItem from="1657495065225" duration="3835000" />
       <workItem from="1657511988066" duration="943000" />
+      <workItem from="1657592434734" duration="4701000" />
+      <workItem from="1657670431499" duration="1270000" />
+      <workItem from="1657674977969" duration="432000" />
+      <workItem from="1657675783717" duration="67000" />
+      <workItem from="1657677073909" duration="162000" />
+      <workItem from="1657680793467" duration="2323000" />
+      <workItem from="1657683175940" duration="2419000" />
     </task>
     <task id="LOCAL-00001" summary="Add Filter">
       <created>1656387887650</created>
@@ -217,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657496958511</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="upload file to page">
+      <created>1657592466723</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657592466723</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +266,8 @@
     <MESSAGE value="add new category and delete category" />
     <MESSAGE value="delete and edit category" />
     <MESSAGE value="upload file and save to disk" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload file and save to disk" />
+    <MESSAGE value="upload file to page" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload file to page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -267,6 +291,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/GlobalExceptionHandler.java</url>
           <line>40</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/DishController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

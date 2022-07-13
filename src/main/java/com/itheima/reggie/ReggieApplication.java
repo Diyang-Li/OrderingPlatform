@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Diyang Li
@@ -13,6 +15,8 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 @SpringBootApplication
 // Scan web filter annotation
 @ServletComponentScan
+// start transaction
+@EnableTransactionManagement
 public class ReggieApplication {
     public static void main(String[] args) {
         SpringApplication.run(ReggieApplication.class,args);
