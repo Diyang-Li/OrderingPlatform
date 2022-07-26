@@ -39,7 +39,9 @@ public class LoginCheckFilter implements Filter {
                 "/employee/logout",
                 "/backend/**",
                 "/front/**",
-                "/common/**"
+                "/common/**",
+                "/user/sendMsg",
+                "/user/login"
         };
 
         //2. check if the url in the ursl doesn't need any treatment
@@ -57,6 +59,16 @@ public class LoginCheckFilter implements Filter {
 
             Long empId = (Long) request.getSession().getAttribute("employee");
             BaseContext.setCurrentId(empId);
+
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        if (request.getSession().getAttribute("user") != null){
+            log.info("the user already login, the id is: {}", request.getSession().getAttribute("user"));
+
+            Long userId = (Long) request.getSession().getAttribute("user");
+            BaseContext.setCurrentId(userId);
 
             filterChain.doFilter(request, response);
             return;
