@@ -28,21 +28,21 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/sendMessage")
-    public R<String> sendMsg(User user, HttpSession session){
+    public R<String> sendMsg(User user, HttpSession session) {
         //get phone number
         //获取手机号
         String phone = user.getPhone();
 
-        if(StringUtils.isNotEmpty(phone)){
+        if (StringUtils.isNotEmpty(phone)) {
             //生成随机的4位验证码
             String code = ValidateCodeUtils.generateValidateCode(4).toString();
-            log.info("code={}",code);
+            log.info("code={}", code);
 
             //调用阿里云提供的短信服务API完成发送短信
             //SMSUtils.sendMessage("瑞吉外卖","",phone,code);
 
             //需要将生成的验证码保存到Session
-            session.setAttribute(phone,code);
+            session.setAttribute(phone, code);
 
             return R.success("Message is sent successfully");
         }
@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public R<User> login(@RequestBody Map map, HttpSession session){
+    public R<User> login(@RequestBody Map map, HttpSession session) {
         log.info(map.toString());
 
         //获取手机号
@@ -62,20 +62,19 @@ public class UserController {
 
         //从Session中获取保存的验证码
         Object codeInSession = session.getAttribute(phone);
+        // 这里应该有一步对比：进行验证码的比对（页面提交的验证码和Session中保存的验证码比对）
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(User::getPhone, phone);
 
-
-            LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
-            queryWrapper.eq(User::getPhone,phone);
-
-            User user = userService.getOne(queryWrapper);
-            if(user == null){
-                //判断当前手机号对应的用户是否为新用户，如果是新用户就自动完成注册
-                user = new User();
-                user.setPhone(phone);
-                user.setStatus(1);
-                userService.save(user);
-            }
-            session.setAttribute("user",user.getId());
-            return R.success(user);
+        User user = userService.getOne(queryWrapper);
+        if (user == null) {
+            //判断当前手机号对应的用户是否为新用户，如果是新用户就自动完成注册
+            user = new User();
+            user.setPhone(phone);
+            user.setStatus(1);
+            userService.save(user);
+        }
+        session.setAttribute("user", user.getId());
+        return R.success(user);
     }
 }
